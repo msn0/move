@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-		<title>move.js - basic usage example</title>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="main.css" />
-		<script src="../../src/move.js"></script>
-	</head>
-	<body>
-		<div id="moveMe">
-			<div class="handler">Move me!</div>
+    <title>move.js - basic usage example</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="../../src/move.js"></script>
+  </head>
+  <body>
+    <div id="moveMe">
+      <div class="handler">Move me!</div>
       <div class="content">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac enim 
         turpis, quis pellentesque ante. Lorem ipsum dolor sit amet, consectetur 
@@ -16,11 +16,11 @@
         nisi, egestas nec rhoncus id, condimentum sed purus. Aenean venenatis 
         porttitor.
       </div>
-		</div>
-		<script>
-			var element = document.querySelector('#moveMe');
+    </div>
+    <script>
+      var element = document.querySelector('#moveMe');
       var handler = document.querySelector('.handler');
-			MovableElement.setMovableElement(element, handler);
-		</script>
-	</body>
+      MovableElement.setMovableElement(element, handler);
+    </script>
+  </body>
 </html>
