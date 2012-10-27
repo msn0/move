@@ -35,7 +35,7 @@
       return this;
     },
 
-    setPosition:function(e){
+    setPosition: function(e){
       var diffX, diffY;
       this.movedX = e.pageX || e.clientX;
       this.movedY = e.pageY || e.clientY;
@@ -56,23 +56,40 @@
       }
     },
 
+    getMouseUpHandler: function(){
+      return this.mU;
+    },
+    
+    getMouseMoveHandler: function(){
+      return this.mM;
+    },
+    
+    addDragEvents: function(){
+      this.mU = this.bind(this, this.mouseUp);
+      this.mM = this.bind(this, this.mouseMove);
+      this.addEvent(document, "mouseup", this.mU, false);
+      this.addEvent(document, "mousemove", this.mM, false);
+      return this;
+    },
+    
+    removeDragEvents: function(){
+      this.removeEvent(document, "mouseup", this.getMouseUpHandler(), false);
+      this.removeEvent(document, "mousemove", this.getMouseMoveHandler(), false);
+      return this;
+    },
+
     mouseDown: function(e){
       e = this.getEvent(e);
       e.preventDefault();
-      this.mU = this.bind(this, this.mouseUp);
-      this.mM = this.bind(this, this.mouseMove);
       this.handlerElement.style.cursor = "move";
-      this.addEvent(document, "mouseup", this.mU, false);
-      this.addEvent(document, "mousemove", this.mM, false);
-      this.calculatePosition(e);
+      this.addDragEvents().calculatePosition(e);
       return false;
     },
 
     mouseUp: function(e){
       e = this.getEvent(e);
-      this.removeEvent(document, "mouseup", this.mU, false);
-      this.removeEvent(document, "mousemove", this.mM, false);
       this.handlerElement.style.cursor = "default";
+      this.removeDragEvents();
       return false;
     },
 
