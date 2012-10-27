@@ -8,7 +8,7 @@ body {
 	height: 100px;
 	line-height: 100px;
 	text-align:center;
-	background: tomato;
+	background: transparent url(../common/bg-noise.png) repeat;
 	font-weight: bold;
 	position: absolute;
 	color: white;

@@ -6,7 +6,7 @@ body {
 }
 #moveMe {
 	width: 300px;
-	background: tomato;
+	background: transparent url(../common/bg-noise.png) repeat;
 	position: absolute;
 	box-shadow: 1px 1px 5px #333;
 }
