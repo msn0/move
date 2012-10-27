@@ -1,0 +1,41 @@
+body {
+  font-size: 14px;
+  background: transparent url(bg-noise.png) repeat 0 0;
+  margin: 0;
+  color: white;
+  font-family: arial;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+section {
+  padding: 20px; 
+}
+section ul {
+  padding-left: 0;
+}
+section ul li {
+  background: white;
+  list-style-type: none;
+  line-height: 40px;
+  padding-left: 10px; 
+  margin: 14px;
+  box-shadow: 3px 3px 10px #666, inset 0 0 30px #EEE;
+  border-radius: 3px;
+}
+section ul li > a {
+  display: block;
+  color: black;
+}
+header {
+  background: black;
+  padding: 10px;
+  box-shadow: 0 0 7px black; 
+}
+header h1 {
+  font-size: 17px;
+  margin: 0;
+}
