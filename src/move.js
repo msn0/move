@@ -3,7 +3,6 @@
   var MovableElement = {
 
     init: function(elementToMove, handlerElement){
-      var that = this;
       this.elementToMove = elementToMove;
       this.handlerElement = handlerElement || elementToMove;
       this.x = 0;
@@ -90,7 +89,7 @@
       } else if (obj.attachEvent) {
         obj.attachEvent('on' + eventType, eventHandler);
       }
-    },
+    }
   };
 
   MovableElement.setMovableElement = function(elementToMove, handlerElement){
