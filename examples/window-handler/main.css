@@ -1,0 +1,26 @@
+body {
+  font-family: arial;
+	font-size: 14px;
+	background: #eee;
+	color: white;
+}
+#moveMe {
+	width: 300px;
+	background: tomato;
+	position: absolute;
+	box-shadow: 1px 1px 5px #333;
+}
+#moveMe .handler {
+	font-weight: bold;
+  background: rgba(1, 1, 1, .1);
+  color: white;
+  padding: 4px 10px;
+	line-height: 30px;
+	text-align: left;
+	text-shadow: 0px 1px 2px black;
+}
+#moveMe .content {
+  padding: 12px;
+  line-height: 17px;
+  font-size: 12px; 
+}
