@@ -82,6 +82,7 @@
       e = this.getEvent(e);
       e.preventDefault();
       this.handlerElement.style.cursor = "move";
+      this.removeDragEvents();
       this.addDragEvents().calculatePosition(e);
       return false;
     },
