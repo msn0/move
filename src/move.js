@@ -59,7 +59,7 @@
     },
 
     addEvent: function(obj, eventType, eventHandler, useCapture) {
-      useCapture || (useCapture = false);
+      useCapture = useCapture || false;
       if (obj.addEventListener) {
         obj.addEventListener(eventType, eventHandler, true);
       } else if (obj.attachEvent) {
@@ -112,7 +112,7 @@
     },
 
     removeEvent: function(obj, eventType, eventHandler, useCapture) {
-      useCapture || (useCapture = false);
+      useCapture = useCapture || false;
       if (obj.removeEventListener) {
         obj.removeEventListener(eventType, eventHandler, true);
       } else if (obj.attachEvent) {
